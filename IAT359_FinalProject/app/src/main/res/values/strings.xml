@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">IAT359_FinalProject</string>
+    <string name="hours_hint">HH</string>
+    <string name="minutes_hint">MM</string>
+    <string name="seconds_hint">SS</string>
+    <string name="colon">:</string>
+    <string name="addEventButtonText">Add Event</string>
+    <string name="eventItemNamePlaceHolder">Event Name</string>
+    <string name="eventItemDateTimePlaceHolder">Tuesday, November 21, 2023 2:30 PM</string>
+    <string name="eventItemLocationPlaceHolder">Conference Room B</string>
+    <string name="workTimeLabel">Work Time:</string>
+    <string name="breakTimeLabel">Break Time:</string>
+    <string name="startTimerButtonText">Start Timer</string>
+    <string name="appTitle">Astudio Study Buddy</string>
+    <string name="upcomingEventsLabel">Upcoming Events</string>
+    <string name="addEventTitle">Add Event</string>
+    <string name="eventNameLabel">Event Name:</string>
+    <string name="eventDateLabel">Event Date:</string>
+    <string name="selectDateButtonLabel">Select Date</string>
+    <string name="selectTimeButtonLabel">Select Time</string>
+    <string name="eventTimeLabel">Event Time:</string>
+    <string name="eventLocationLabel">Event Location:</string>
 </resources>

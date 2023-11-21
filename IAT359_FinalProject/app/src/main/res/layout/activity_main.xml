@@ -8,12 +8,13 @@
 
     <TextView
         android:id="@+id/homePageTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Astudio Study Buddy"
+        android:gravity="center"
+        android:text="@string/appTitle"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,10 +23,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeRecyclerView"
-        android:layout_width="409dp"
-        android:layout_height="300dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="125dp" />
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonChain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homePageTitle"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/HomeSubtitle"
@@ -34,7 +40,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="16dp"
-        android:text="Upcoming Events"
+        android:text="@string/upcomingEventsLabel"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -45,12 +51,11 @@
         android:id="@+id/buttonChain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeRecyclerView"
-        app:layout_constraintVertical_bias="0.943">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/calendarButton"
@@ -90,4 +95,15 @@
             app:srcCompat="@drawable/ic_timer" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/addEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/addEventButtonText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toEndOf="@+id/HomeSubtitle"
+        app:layout_constraintTop_toBottomOf="@+id/homePageTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
