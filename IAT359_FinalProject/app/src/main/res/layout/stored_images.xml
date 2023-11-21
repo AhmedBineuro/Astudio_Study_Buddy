@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/storageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Stored Images"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/storedRecyclerView"
+        android:layout_width="409dp"
+        android:layout_height="300dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF5733"
+        android:text="Open Camera"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <LinearLayout
+        android:id="@+id/buttonChain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storedRecyclerView"
+        app:layout_constraintVertical_bias="0.981">
+
+        <ImageView
+            android:id="@+id/calendarButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/storageButton"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <ImageView
+            android:id="@+id/storageButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/homeButton"
+            app:layout_constraintStart_toEndOf="@+id/calendarButton"
+            app:srcCompat="@drawable/ic_storage" />
+
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/pomodoroButton"
+            app:layout_constraintStart_toEndOf="@+id/storageButton"
+            app:srcCompat="@drawable/ic_home" />
+
+        <ImageView
+            android:id="@+id/pomodoroButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/homeButton"
+            app:srcCompat="@drawable/ic_timer" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/setTimerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pomodoroTitle">
+
+    <TextView
+        android:id="@+id/setTimerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Work Time:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <EditText
+        android:id="@+id/setTimerEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Desired time"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="97dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setBreakLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setTimerLayout">
+
+    <TextView
+        android:id="@+id/setBreakTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Break Time:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <EditText
+        android:id="@+id/setBreakEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Desired time"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="176dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pomodoroTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pomodoro Timer"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <Button
+        android:id="@+id/timerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF5733"
+        android:text="Start Timer"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <LinearLayout
+        android:id="@+id/buttonChain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerButton"
+        app:layout_constraintVertical_bias="0.981">
+
+        <ImageView
+            android:id="@+id/calendarButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/storageButton"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <ImageView
+            android:id="@+id/storageButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/homeButton"
+            app:layout_constraintStart_toEndOf="@+id/calendarButton"
+            app:srcCompat="@drawable/ic_storage" />
+
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/pomodoroButton"
+            app:layout_constraintStart_toEndOf="@+id/storageButton"
+            app:srcCompat="@drawable/ic_home" />
+
+        <ImageView
+            android:id="@+id/pomodoroButton"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/homeButton"
+            app:srcCompat="@drawable/ic_timer" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
